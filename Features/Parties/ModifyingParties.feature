@@ -44,5 +44,5 @@ Feature: Modifying a party
             Then she gets error <message> and code <code>
 
         Examples:
-        | message                              |  code          | id  | phoneNo        |
+        | message                              |  code          | id  | phoneNo       |
         | PhoneNomber cannot be duplicated     | P-BR-1005      | 1   | 0991123300    | 
