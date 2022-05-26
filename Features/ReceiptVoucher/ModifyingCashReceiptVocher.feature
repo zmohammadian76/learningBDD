@@ -5,8 +5,14 @@ Feature: Modifying a receipt voucher
 
 
     Background: 
-       Given An operator named 'Zahra' has admin system and logged in
-       Given there is a party and a cashbox active
+       Given 'zahra' has admin system and logged in
+       And there is a party with following info
+            |Id   |username       |Firstname     |Lastname    |PhoneNo        |Address|
+            |1    |MT73           |MOhammadReza  |Taghipour   |09911233223    |1st street, Tehran, Iran|
+       And there is a cashbox with title 'cashbox-main-3' and following info
+            |id     |title cashbox       |status|  
+            |101    |cashbox-main-3      |active|
+
 
     Scenario: receipt voucher gets modified properly
         Given 'zahra' has defined a receipt voucher with following info
