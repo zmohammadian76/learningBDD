@@ -39,8 +39,8 @@ Feature: Modifying a cashbox
                 |Id     |Title            |Status|  
                 |104    |cashbox-main-4   |deactive|
             When 'Mina' tries to modify a party with id '100' with follwoing info
-                |Title     |Status  
-                |<Title>   |Status 
+                |Title     |Status|  
+                |<Title>   |Status| 
             Then she gets error <message> and code <code>       
     Examples:
         | Message                          |  Code               | Id  | Title            |Status| 

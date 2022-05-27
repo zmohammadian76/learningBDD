@@ -48,16 +48,11 @@
             Then she gets error 'Id cannot be duplicated' and code 'P-BR-3007'
 
 
-        Scenario Outline: a new cash receipt voucher gets defined only for active cashbox
+        Scenario: a new cash receipt voucher gets defined only for active cashbox
            Given there is a cashbox with title 'cashbox-main-1' and following info
-               |Id     |Title            |Status|  
-               |100    |cashbox-main-1   |false |
+               |Id     |Title            |Status  |  
+               |100    |cashbox-main-1   |deactive|
            When 'zahra' tries to define a new cash receipt voucher with following info
                |Id    |Username    |Date          |Subject      |Amount      |Cashbox       |
                |200   |MT73        |1401-03-04    |subject      |500.000     |cashbox-main-1|
-           Then she gets error <message> and code <code>
-
-       Examples:
-        | Message                          |  Code    |      
-        | cashbox is deactive              | P-BR-3008|    
-
+           Then she gets error 'cashbox is deactive' and code 'P-BR-3008'
