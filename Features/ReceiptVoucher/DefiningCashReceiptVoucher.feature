@@ -35,7 +35,7 @@
         | subject is required        | P-BR-3003     |200 | MT73        | 1401-03-04   |               |500.000     |cashbox-main-3|
         | Amount is required         | P-BR-3004     |200 | MT73        | 1401-03-04   |sales goods    |            |cashbox-main-3|
         | invalid Amount is provided | P-BR-3005     |200 | MT73        | 1401-03-04   |sales goods    |-500        |cashbox-main-3|
-        | cashbox is required        | P-BR-3006     |200 | MT73        | 1401-03-04   |sales goods    |500.000     |            |
+        | cashbox is required        | P-BR-3006     |200 | MT73        | 1401-03-04   |sales goods    |500.000     |              |
 
 
         Scenario: a new cash receipt voucher gets defined with its unique properties

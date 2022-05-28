@@ -20,11 +20,11 @@ Feature: Modifying a cash receipt voucher
             |200   |MT73        |1401-03-04    |sales goods  |500.000     |cashbox-main-3|
         When 'zahra' tries to modify a cash receipt voucher with id '200' with follwoing info
             |Username   |Date          |Subject      |Amount      |Cashbox     |
-            |ZM76       |1401-03-05    |sales goods  |300.000     |cashbox-main-2|
+            |MT73       |1401-03-05    |sales goods  |300.000     |cashbox-main-2|
         Then the party with id '200' gets modified properly
 
     Scenario Outline: a cash receipt voucher is not modified with invalid info
-       Given 'zahra' has defined a receipt voucher with following info
+       Given 'zahra' has defined a cash receipt voucher with following info
             |Id    |Username    |Date          |Subject      |Amount      |Cashbox       |
             |200   |MT73        |1401-03-04    |sales goods  |500.000     |cashbox-main-3|
         When 'zahra' tries to modify a cash receipt voucher with id '200' with follwoing info
@@ -34,11 +34,11 @@ Feature: Modifying a cash receipt voucher
 
      Examples:
         | Message                    |  Code         | Username    | Date         |Subject        |Amount      |Cashbox       |
-        | username is Required       | P-BR-3009     |             | 1401.03.04   |sales goods    |500.000     |cashbox-main-3|
+        | username is Required       | P-BR-3009     |             | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
         | Date is Required           | P-BR-3009     |    MT73     |              |sales goods    |500.000     |cashbox-main-3|
-        | subject is Required        | P-BR-3009     |    MT73     | 1401.03.04   |               |500.000     |cashbox-main-3|
-        | Amount is Required         | P-BR-3009     |    MT73     | 1401.03.04   |sales goods    |            |cashbox-main-3|
-        | cashbox is Required        | P-BR-3009     |    MT73     | 1401.03.04   |sales goods    |500.000     |              |
+        | subject is Required        | P-BR-3009     |    MT73     | 1401-03-04   |               |500.000     |cashbox-main-3|
+        | Amount is Required         | P-BR-3009     |    MT73     | 1401-03-04   |sales goods    |            |cashbox-main-3|
+        | cashbox is Required        | P-BR-3009     |    MT73     | 1401-03-04   |sales goods    |500.000     |              |
 
 
     Scenario: a cash receipt voucher is modified only for active cashbox
