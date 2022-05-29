@@ -11,14 +11,14 @@ Background:
            |1    |MT73           |MOhammadReza  |Taghipour   |09911233223    |1st street, Tehran, Iran|
 
 Scenario: a new bank receipt vocher gets defined properly
-       When 'Zahra' tries to define a new bank transfer receipt vocher with follwoing info
+       When 'Zahra' tries to define a new bank receipt vocher with follwoing info
           |Id    |Username    |Date          |Subject      |Amount      |ReferenceNumber   |Bank        |BankBranch    |ReferralDate|
           |300   |MT73        |1401-03-04    |sales goods  |300.000     |33801593845       | tejarat    |saadatAbad    |1401-02-05  |
        Then a new bank receipt vocher with Id '300' gets defined properly 
 
 
-Scenario Outline: a new bank receipt is not defined with invalid info
-        When 'zahra' tries to define a new bank receipt with follwoing info
+Scenario Outline: a new bank receipt vocher is not defined with invalid info
+        When 'zahra' tries to define a new bank receipt vocher with follwoing info
            |Id    |Username    |Date        |Subject      |Amount      |ReferenceNumber     |Bank        |BankBranch    |ReferralDate  |
            |<Id>  |<Username>  |<Date>      |<subject>    |<Amount>    |<ReferenceNumber>   |<Bank>      |<BankBranch>  |<ReferralDate>|
         Then she gets error <message> and code <code>
@@ -38,8 +38,8 @@ Scenario Outline: a new bank receipt is not defined with invalid info
         | Referral date is required  | P-BR-4009     |300 | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845      | tejarat    |saadatAbad    |             |
 
 
-Scenario Outline: a new bank receipt gets defined with its unique properties
-        Given 'zahra' has defined a bank receipt with following info
+Scenario Outline: a new bank receipt vocher gets defined with its unique properties
+        Given 'zahra' has defined a bank receipt vocher with following info
             |Id    |Username    |Date          |Subject      |Amount      |ReferenceNumber  |Bank        |BankBranch    |ReferralDate |
             |300   |MT73        |1401-03-04    |sales goods  |300.000     |33801593845      | tejarat    |saadatAbad    |1401-02-05   |
         When 'zahra' tries to define a new bank receipt vocher with follwoing info

@@ -11,10 +11,10 @@ Background:
 
 
 Scenario: bank receipt gets modified properly
-    Given 'zahra' has defined a bank receipt with following info
+    Given 'zahra' has defined a bank receipt vocher with following info
         |Id    |Username    |Date          |Subject      |Amount      |ReferenceNumber   |Bank        |BankBranch    |ReferralDate|
         |300   |MT73        |1401-03-04    |sales goods  |300.000     |33801593845       | tejarat    |saadatAbad    |1401-02-05  |
-    When 'zahra' tries to modify a bank receipt with id '300' with follwoing info
+    When 'zahra' tries to modify a bank receipt vocher with id '300' with follwoing info
         |Username    |Date          |Subject      |Amount      |ReferenceNumber    |Bank        |BankBranch    |ReferralDate |
         |MT73        |1401-03-08    |sales goods  |450.000     |33801593985        | pasargad   |saadatAbad    |1401-02-02   |
     Then the party with id '300' gets modified properly
