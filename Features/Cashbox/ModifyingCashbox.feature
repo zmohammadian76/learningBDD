@@ -35,16 +35,16 @@ Feature: Modifying a cashbox
             Given 'Mina' has defined a cashbox with following info
                 |Id     |Title            |Status|  
                 |100    |cashbox-main-1   |active|
-            And 'Mina' has defined a party with following info
+            And 'Mina' has defined a cashbox with following info
                 |Id     |Title            |Status|  
                 |104    |cashbox-main-4   |deactive|
-            When 'Mina' tries to modify a party with id '100' with follwoing info
+            When 'Mina' tries to modify a cashbox with id '100' with follwoing info
                 |Title     |Status|  
                 |<Title>   |Status| 
             Then she gets error <message> and code <code>       
     Examples:
         | Message                          |  Code               | Id  | Title            |Status| 
-        | title cannot be duplicated       |  P-BR-2001          | 100 | cashbox-main-4   |active|
+        | title cannot be duplicated       |  P-BR-2001          | 100 | cashbox-main-1   |active|
         
 
 

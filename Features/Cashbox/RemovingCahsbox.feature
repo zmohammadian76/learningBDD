@@ -9,10 +9,10 @@ Feature: Removing cashbox
 
  Scenario: cashbox gets removed properly
         Given 'Mina' has defined a cashbox with following info
-            |Id     |Title cashbox          |Status|  
-            |100    |cashbox-main-1         |active|
+            |Id     |Title           |Status|  
+            |100    |cashbox-main-1  |active|
         And 'Mina' has defined a cashbox with following info
-            |Id     |Title cashbox       |Status|  
-            |101    |cashbox-main-3      |active|
+            |Id     |Title           |Status|  
+            |101    |cashbox-main-3  |active|
         When 'Mina' tries to remove the cashbox with id '100'
         Then she will no loger see a cashbox with id '100' within the system
