@@ -28,14 +28,14 @@
 
        Examples:
         | Message                    |  Code         | id | Username    | Date         |Subject        |Amount      |Cashbox       | 
-        | Invalid id is provided     | P-BR-3000     |    | MT73        | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
-        | Invalid id is provided     | P-BR-3000     |-200| MT73        | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
-        | username is required       | P-BR-3001     |200 |             | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
-        | Date is required           | P-BR-3002     |200 | MT73        |              |sales goods    |500.000     |cashbox-main-3|
-        | subject is required        | P-BR-3003     |200 | MT73        | 1401-03-04   |               |500.000     |cashbox-main-3|
-        | Amount is required         | P-BR-3004     |200 | MT73        | 1401-03-04   |sales goods    |            |cashbox-main-3|
-        | invalid Amount is provided | P-BR-3005     |200 | MT73        | 1401-03-04   |sales goods    |-500        |cashbox-main-3|
-        | cashbox is required        | P-BR-3006     |200 | MT73        | 1401-03-04   |sales goods    |500.000     |              |
+        | Invalid id is provided     | R-BR-3000     |    | MT73        | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
+        | Invalid id is provided     | R-BR-3000     |-200| MT73        | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
+        | username is required       | R-BR-3001     |200 |             | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
+        | Date is required           | R-BR-3002     |200 | MT73        |              |sales goods    |500.000     |cashbox-main-3|
+        | subject is required        | R-BR-3003     |200 | MT73        | 1401-03-04   |               |500.000     |cashbox-main-3|
+        | Amount is required         | R-BR-3004     |200 | MT73        | 1401-03-04   |sales goods    |            |cashbox-main-3|
+        | invalid Amount is provided | R-BR-3005     |200 | MT73        | 1401-03-04   |sales goods    |-500        |cashbox-main-3|
+        | cashbox is required        | R-BR-3006     |200 | MT73        | 1401-03-04   |sales goods    |500.000     |              |
 
 
         Scenario: a new cash receipt voucher gets defined with its unique properties
@@ -45,7 +45,7 @@
             When 'zahra' tries to define a new cash receipt voucher with follwoing info
                 |Id    |Username    |Date          |Subject      |Amount      |Cashbox       |
                 |200   |EM76        |1401-03-06    |subject      |450.000     |cashbox-main-3|
-            Then she gets error 'Id cannot be duplicated' and code 'P-BR-3007'
+            Then she gets error 'Id cannot be duplicated' and code 'R-BR-3007'
 
 
         Scenario: a new cash receipt voucher gets defined only for active cashbox
@@ -55,4 +55,4 @@
            When 'zahra' tries to define a new cash receipt voucher with following info
                |Id    |Username    |Date          |Subject      |Amount      |Cashbox       |
                |200   |MT73        |1401-03-04    |subject      |500.000     |cashbox-main-1|
-           Then she gets error 'cashbox is deactive' and code 'P-BR-3008'
+           Then she gets error 'cashbox is deactive' and code 'R-BR-3008'

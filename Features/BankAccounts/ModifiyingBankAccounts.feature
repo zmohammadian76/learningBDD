@@ -30,8 +30,8 @@ Scenario Outline: a Bank Account is not modified with invalid info
 
 Examples:
         | Message                      |  Code          |AccountNumber    | Bank    |
-        | AccountNumber is Required    | P-BR-5006      |                 | tejarat | 
-        | Bank is Required             | P-BR-5007      |1308116125874961 |         |
+        | AccountNumber is Required    | B-BR-5006      |                 | tejarat | 
+        | Bank is Required             | B-BR-5007      |1308116125874961 |         |
 
 Scenario: a Bank Account gets modified with its unique properties
         Given 'Mina' has defined a Bank Account with following info
@@ -43,4 +43,4 @@ Scenario: a Bank Account gets modified with its unique properties
         When 'Mina' tries to modify a  Bank Account with id '500' with following info
             |AccountNumber    | Bank   |     
             |1308116125874961 |tejarat |  
-        Then she gets error ' AccountNumber cannot be duplicated' and code 'P-BR-5008' 
+        Then she gets error ' AccountNumber cannot be duplicated' and code 'B-BR-5008' 

@@ -27,7 +27,7 @@ Feature: Modifying a cashbox
 
         Examples:
         | Message                      |  Code               | Id  | Title     |Status| 
-        | title is Required            |  P-BR-2000          | 100 |           |active|
+        | title is Required            |  C-BR-2000          | 100 |           |active|
 
 
 
@@ -44,7 +44,7 @@ Feature: Modifying a cashbox
             Then she gets error <message> and code <code>       
     Examples:
         | Message                          |  Code               | Id  | Title            |Status| 
-        | title cannot be duplicated       |  P-BR-2001          | 100 | cashbox-main-1   |active|
+        | title cannot be duplicated       |  C-BR-2001          | 100 | cashbox-main-1   |active|
         
 
 

@@ -21,9 +21,9 @@ Scenario Outline: a new Bank is not defined with invalid info
 
  Examples:
         | Message                      |  Code          | Id | Title  |                  
-        | Invalid Id is provided       | P-BR-4000      |    | tejarat|    
-        | Invalid Id is provided       | P-BR-4001      |-400| tejarat|   
-        | Tittle is Required           | P-BR-4002      |400 |        |                 
+        | Invalid Id is provided       | B-BR-4000      |    | tejarat|    
+        | Invalid Id is provided       | B-BR-4001      |-400| tejarat|   
+        | Tittle is Required           | B-BR-4002      |400 |        |                 
 
 
 Scenario Outline: a new Bank gets defined with its unique properties
@@ -38,5 +38,5 @@ Scenario Outline: a new Bank gets defined with its unique properties
 
   Examples:
         | Message                              |  Code          | Id  |Title       |
-        | Id cannot be duplicated              | P-BR-4003      | 400 |tejarat     |
-        | Title cannot be duplicated           | P-BR-4004      | 400 |tejarat     |          
+        | Id cannot be duplicated              | B-BR-4003      | 400 |tejarat     |
+        | Title cannot be duplicated           | B-BR-4004      | 400 |tejarat     |          

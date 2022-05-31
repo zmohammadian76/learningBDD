@@ -21,9 +21,9 @@ Feature: Defining new cashbox
 
          Examples:
         | Message                      |  Code          | Id | Title            |Status|        
-        | Invalid id is provided       | P-BR-2003      |    | cashbox-main     |active|   
-        | Invalid id is provided       | P-BR-2003      |-100| cashbox-main     |active|
-        | tittle is Required           | P-BR-2004      |100 |                  |active|            
+        | Invalid id is provided       | C-BR-2003      |    | cashbox-main     |active|   
+        | Invalid id is provided       | C-BR-2003      |-100| cashbox-main     |active|
+        | tittle is Required           | C-BR-2004      |100 |                  |active|            
 
 
          Scenario Outline: a new cashbox get defined with its unique properties
@@ -38,5 +38,5 @@ Feature: Defining new cashbox
 
          Examples:
         | Message                              |  Code          | Id  |Title       |
-        | Id cannot be duplicated              | P-BR-2005      | 100 |cashbox-main|
-        | title cannot be duplicated           | P-BR-2006      | 100 |cashbox-main|  
+        | Id cannot be duplicated              | C-BR-2005      | 100 |cashbox-main|
+        | title cannot be duplicated           | C-BR-2006      | 100 |cashbox-main|  

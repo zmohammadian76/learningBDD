@@ -34,11 +34,11 @@ Feature: Modifying a cash receipt voucher
 
      Examples:
         | Message                    |  Code         | Username    | Date         |Subject        |Amount      |Cashbox       |
-        | username is Required       | P-BR-3009     |             | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
-        | Date is Required           | P-BR-3009     |    MT73     |              |sales goods    |500.000     |cashbox-main-3|
-        | subject is Required        | P-BR-3009     |    MT73     | 1401-03-04   |               |500.000     |cashbox-main-3|
-        | Amount is Required         | P-BR-3009     |    MT73     | 1401-03-04   |sales goods    |            |cashbox-main-3|
-        | cashbox is Required        | P-BR-3009     |    MT73     | 1401-03-04   |sales goods    |500.000     |              |
+        | username is Required       | R-BR-3009     |             | 1401-03-04   |sales goods    |500.000     |cashbox-main-3|
+        | Date is Required           | R-BR-3009     |    MT73     |              |sales goods    |500.000     |cashbox-main-3|
+        | subject is Required        | R-BR-3009     |    MT73     | 1401-03-04   |               |500.000     |cashbox-main-3|
+        | Amount is Required         | R-BR-3009     |    MT73     | 1401-03-04   |sales goods    |            |cashbox-main-3|
+        | cashbox is Required        | R-BR-3009     |    MT73     | 1401-03-04   |sales goods    |500.000     |              |
 
 
     Scenario: a cash receipt voucher is modified only for active cashbox
@@ -54,4 +54,4 @@ Feature: Modifying a cash receipt voucher
            When 'zahra' tries to modify a cash receipt voucher with following info
                |Username    |Date          |Subject      |Amount      |Cashbox       |
                |MT73        |1401-03-04    |sales goods  |500.000     |cashbox-main-2|
-           Then she gets error 'cashbox is deactive' and code 'P-BR-3008'    
+           Then she gets error 'cashbox is deactive' and code 'R-BR-3008'    

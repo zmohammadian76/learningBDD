@@ -12,8 +12,8 @@ Scenario: Bank gets modified properly
         |Id     |Title  |             
         |400    |tejarat|  
     When 'Mina' tries to modify a Bank with id '400' with follwoing info
-        |Title             
-        |saman  
+        |Title|             
+        |saman| 
     Then the Bank with id '400' gets modified properly
 
 Scenario: a Bank is not modified with invalid info
@@ -23,7 +23,7 @@ Scenario: a Bank is not modified with invalid info
         When 'Mina' tries to modify a Bank with id '400' with follwoing info
             |Title  |    
             |<Title>| 
-        Then she gets error 'title is Required' and code 'P-BR-4005'   
+        Then she gets error 'title is Required' and code 'B-BR-4005'   
 
 Scenario: a Bank gets modified with its unique properties
         Given 'Mina' has defined a Bank with following info
@@ -35,4 +35,4 @@ Scenario: a Bank gets modified with its unique properties
         When 'Mina' tries to modify a Bank with id '400' with follwoing info
             |Title  |      
             |tejarat|   
-        Then she gets error 'title cannot be duplicated' and code 'P-BR-4006'       
+        Then she gets error 'title cannot be duplicated' and code 'B-BR-4006'       

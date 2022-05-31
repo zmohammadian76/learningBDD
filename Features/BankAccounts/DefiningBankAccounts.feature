@@ -25,10 +25,10 @@ Scenario Outline: a new Bank Account is not defined with invalid info
 
 Examples:
         | Message                      |  Code          | Id |AccountNumber    | Bank    |                  
-        | Invalid Id is provided       | P-BR-5000      |    |1308116125874961 | tejarat |
-        | Invalid Id is provided       | P-BR-5001      |-400|1308116125874961 | tejarat |
-        | AccountNumber is Required    | P-BR-5002      |400 |                 | tejarat | 
-        | Bank is Required             | P-BR-5003      |400 |1308116125874961 |         |
+        | Invalid Id is provided       | B-BR-5000      |    |1308116125874961 | tejarat |
+        | Invalid Id is provided       | B-BR-5001      |-400|1308116125874961 | tejarat |
+        | AccountNumber is Required    | B-BR-5002      |400 |                 | tejarat | 
+        | Bank is Required             | B-BR-5003      |400 |1308116125874961 |         |
 
 
 Scenario Outline: a new Bank Account gets defined with its unique properties
@@ -42,7 +42,7 @@ Scenario Outline: a new Bank Account gets defined with its unique properties
 
 Examples:
         | Message                              |  Code          | Id  |AccountNumber    | Bank    | 
-        | Id cannot be duplicated              | P-BR-5004      | 500 |1308116125874958 | tejarat |
-        | AccountNumber cannot be duplicated   | P-BR-5005      | 501 |1308116125874961 | tejarat |      
+        | Id cannot be duplicated              | B-BR-5004      | 500 |1308116125874958 | tejarat |
+        | AccountNumber cannot be duplicated   | B-BR-5005      | 501 |1308116125874961 | tejarat |      
 
 

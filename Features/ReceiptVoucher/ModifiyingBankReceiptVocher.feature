@@ -30,14 +30,14 @@ Scenario Outline: a bank receipt vocher is not modified with invalid info
 
  Examples:
         | Message                    |  Code         | Username    | Date         |Subject        |Amount      |ReferenceNumber     |Bank      |BankBranch    |ReferralDate |
-        | Username is required       | P-BR-4012     |             | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |
-        | Date is required           | P-BR-4013     | MT73        |              |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
-        | subject is required        | P-BR-4014     | MT73        | 1401-03-04   |               |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |   
-        | Amount is required         | P-BR-4015     | MT73        | 1401-03-04   |sales goods    |            |33801593845         | tejarat  |saadatAbad    |1401-02-05   | 
-        | Reference is required      | P-BR-4016     | MT73        | 1401-03-04   |sales goods    |300.000     |                    | tejarat  |saadatAbad    |1401-02-05   |  
-        | Bank name is required      | P-BR-4017     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
-        | Branch name is required    | P-BR-4018     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |              |1401-02-05   | 
-        | Referral date is required  | P-BR-4019     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
+        | Username is required       | R-BR-4012     |             | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |
+        | Date is required           | R-BR-4013     | MT73        |              |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
+        | subject is required        | R-BR-4014     | MT73        | 1401-03-04   |               |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |   
+        | Amount is required         | R-BR-4015     | MT73        | 1401-03-04   |sales goods    |            |33801593845         | tejarat  |saadatAbad    |1401-02-05   | 
+        | Reference is required      | R-BR-4016     | MT73        | 1401-03-04   |sales goods    |300.000     |                    | tejarat  |saadatAbad    |1401-02-05   |  
+        | Bank name is required      | R-BR-4017     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
+        | Branch name is required    | R-BR-4018     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |              |1401-02-05   | 
+        | Referral date is required  | R-BR-4019     | MT73        | 1401-03-04   |sales goods    |300.000     |33801593845         | tejarat  |saadatAbad    |1401-02-05   |  
 
 
 Scenario Outline: a bank receipt vocher gets modified with its unique properties
@@ -54,5 +54,5 @@ Scenario Outline: a bank receipt vocher gets modified with its unique properties
 
 Examples:
         | Message                              |  Code          | Id  |ReferenceNumber|
-        | Reference cannot be duplicated       | P-BR-4020      | 301 |33801593845     |
+        | Reference cannot be duplicated       | R-BR-4020      | 301 |33801593845     |
                                                   
