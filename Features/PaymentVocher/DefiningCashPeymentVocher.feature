@@ -54,4 +54,4 @@ Scenario: a new cash peyment voucher gets defined only for active cashbox
         When 'zahra' tries to define a new cash peyment voucher with following info
             |Id    |Username    |Date          |Subject          |Amount      |Cashbox       |
             |600   |MT73        |1401-03-04    |return of goods  |500.000     |cashbox-main-1|
-        Then she gets error 'cashbox is deactive' and code 'R-BR-3008'
+        Then she gets error 'cashbox is deactive' and code 'P-BR-3008'

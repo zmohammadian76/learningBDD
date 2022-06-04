@@ -20,7 +20,7 @@ Scenario: cash peyment voucher gets modified properly
         |600   |MT73        |1401-03-04    |return of goods  |500.000     |cashbox-main-3|
     When 'zahra' tries to modify a cash peyment voucher with id '600' with follwoing info
         |Username   |Date          |Subject          |Amount      |Cashbox     |
-        |MT73       |1401-03-05    |return of goods  |300.000     |cashbox-main-2|
+        |MT73       |1401-03-05    |return of goods  |300.000     |cashbox-main-3|
     Then the party with id '600' gets modified properly
 
 

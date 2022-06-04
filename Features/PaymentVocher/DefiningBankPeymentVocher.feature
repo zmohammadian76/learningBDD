@@ -54,7 +54,7 @@ Scenario Outline: a new bank peyment vocher gets defined with its unique propert
     Then she gets error <message> and code <code>
 
 Examples:
-        | Message                              |  Code          | Id  |ReferenceNumber |
-        | Id cannot be duplicated              | P-BR-7010      | 700 |33805065987     |
-        | Reference cannot be duplicated       | P-BR-7011      | 701 |33801593845     |
+        | Message                                    |  Code          | Id  |ReferenceNumber |
+        | Id cannot be duplicated                    | P-BR-7010      | 700 |33805065987     |
+        | ReferenceNumber cannot be duplicated       | P-BR-7011      | 701 |33801593845     |
 
