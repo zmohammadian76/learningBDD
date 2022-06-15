@@ -4,15 +4,17 @@ As a financial manager
 I want to get Balance Report from vouchers
 
     Background:
-        Given 'Mina' is system administrator and has logged in
+    Given 'Mina' is system administrator and has logged in
     And there is a party with following info
         |Id   |Username       |Firstname     |Lastname    |PhoneNo        |Address|
-        |1    |MT73           |MOhammadReza  |Taghipour   |09911233223    |1st street, Tehran, Iran|
+        |1    |MT73           |MOhammadReza  |Taghipour   |09911233223    |1st street, Tehran, Iran |
+        |2    |ZM76           |Zahra         |Mohammadian |09135556985    |1st street, esfahan, Iran|
+        |3    |EH96           |Elham         |Hamidi      |09131112547    |1st street, karaj, Iran  |
     And there is a cashbox with following info
         |Id     |Title              |Status|  
         |100    |cashbox-main-3     |active|            
     And there are cash receipts vocher with following info
-        |Id    |Username    |Date          |Subject      |Amount      |Cashbox     |
+        |Id    |Username    |Date          |Subject      |Amount      |Cashbox       |
         |200   |MT73        |1401-03-04    |sales goods  |500.000     |cashbox-main-3|
         |201   |ZM76        |1401-03-03    |sales goods  |400.000     |cashbox-main-3|
         |202   |EH96        |1401-03-02    |sales goods  |300.000     |cashbox-main-3|
@@ -113,9 +115,9 @@ I want to get Balance Report from vouchers
           
         Examples: Filtering based on voucher type and BankAccountNumber (payment)
           | FromDate   | ToDate     | VocherType   | cashbox       | BankAccountNumber | Id  | Date       | Amount  | Username  | VoucherType | 
-          | 1401-03-02 | 1401-03-04 | bank receipt |               | 1308116125874961  | 700 | 1401-03-04 | 300.000 | MT73      | bank payment|
-          | 1401-03-02 | 1401-03-04 | bank receipt |               | 1401106125874961  | 701 | 1401-03-03 | 400.000 | ZM76      | bank payment| 
-          | 1401-03-02 | 1401-03-04 | bank receipt |               | 1308116125556661  | 702 | 1401-03-02 | 200.000 | EH96      | bank payment| 
+          | 1401-03-02 | 1401-03-04 | bank payment |               | 1308116125874961  | 700 | 1401-03-04 | 300.000 | MT73      | bank payment|
+          | 1401-03-02 | 1401-03-04 | bank payment |               | 1401106125874961  | 701 | 1401-03-03 | 400.000 | ZM76      | bank payment| 
+          | 1401-03-02 | 1401-03-04 | bank payment |               | 1308116125556661  | 702 | 1401-03-02 | 200.000 | EH96      | bank payment| 
           
       
       Scenario Outline:  Balance report does not report properly with invalid filters
@@ -125,14 +127,10 @@ I want to get Balance Report from vouchers
        Then she gets error <message> and code <code>
            
        Examples: 
-         | Message                              |  Code          | FromDate   | ToDate   | VocherType   | cashbox      | BankAccountNumber |
-         |FromDate is required                  |R-BR-8000       |            |1401-03-03|              |              |                   |
-         |FromDate should be less than ToDate   |R-BR-8001       |1401-03-04  |1401-03-02|              |              |                   |
-         |ToDate is required                    |R-BR-8002       |1401-03-02  |          |              |              |                   |
-         |ToDate should be more than FromDate   |R-BR-8003       |1401-03-03  |1401-03-02|              |              |                   |
-         |Wrong value selected                  |R-BR-8004       |1401-03-02  |1401-03-04| cash receipt |              |1308116125556661   |
-         |Wrong value selected                  |R-BR-8004       |1401-03-02  |1401-03-04| bank receipt |cashbox-main-3|                   |
-         |Wrong value selected                  |R-BR-8004       |1401-03-02  |1401-03-04| cash payment |              |1308116125556661   |
-         |Wrong value selected                  |R-BR-8004       |1401-03-02  |1401-03-04| bank payment |cashbox-main-3|                   |
-         |Invalid BankAccountNumber is provided |R-BR-8005       |1401-03-02  |1401-03-04| bank payment |              |-1308116125556661  |
+         | Message                                           |  Code          | FromDate   | ToDate   | VocherType   | cashbox      | BankAccountNumber |
+         |FromDate is required                               |R-BR-8000       |            |1401-03-03|              |              |                   |
+         |FromDate should be less than or equal to ToDate    |R-BR-8001       |1401-03-04  |1401-03-02|              |              |                   |
+         |ToDate is required                                 |R-BR-8002       |1401-03-02  |          |              |              |                   |
+         |ToDate should be greater than or equal to FromDate |R-BR-8003       |1401-03-03  |1401-03-02|              |              |                   |
+         |Invalid BankAccountNumber is provided              |R-BR-8004       |1401-03-02  |1401-03-04| bank payment |              |-1308116125556661  |
          
