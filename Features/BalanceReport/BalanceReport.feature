@@ -52,11 +52,11 @@ I want to get Balance Report from vouchers
 
         Examples: Balance report item (1401-03-03)
           | FromDate   | ToDate     | VocherType | Cashbox | BankAccountNumber |PhoneNo |balanceAmount  | Id1 | Date1      | Amount1 | Username1 | VoucherType1 | Id2 | Date2      | Amount2 | Username2 | VoucherType2 | Id3 | Date3      | Amount3 | Username3 | VoucherType3 | Id4 | Date4      | Amount4 | Username4 | VoucherType4 |
-          | 1401-03-03 | 1401-03-03 |            |         |                   |        |200.000        | 201 | 1401-03-03 | 400.000 | ZM76      | cash receipt | 601 | 1401-03-03 | 200.000 | ZM76      | cash payment | 701 | 1401-03-03 | 400.000 | ZM76      | bank payment | 301 | 1401-03-03 | 450.000 | ZM76      | bank receipt |
+          | 1401-03-03 | 1401-03-03 |            |         |                   |        |250.000        | 201 | 1401-03-03 | 400.000 | ZM76      | cash receipt | 601 | 1401-03-03 | 200.000 | ZM76      | cash payment | 701 | 1401-03-03 | 400.000 | ZM76      | bank payment | 301 | 1401-03-03 | 450.000 | ZM76      | bank receipt |
 
         Examples: Balance report item (1401-03-04)
-          | FromDate   | ToDate     | VocherType | Cashbox | BankAccountNumber |PhoneNo   |balanceAmount | Id1 | Date1      | Amount1 | Username1 | VoucherType1 | Id2 | Date2      | Amount2 | Username2 | VoucherType2 | Id3 | Date3      | Amount3 | Username3 | VoucherType3 | Id4 | Date4      | Amount4 | Username4 | VoucherType4 |
-          | 1401-03-04 | 1401-03-04 |            |         |                   |          |150.000       | 202 | 1401-03-04 | 700.000 | MT73      | cash receipt | 602 | 1401-03-04 | 600.000 | MT73      | cash payment | 702 | 1401-03-04 | 200.000 | MT73      | bank payment | 300 | 1401-03-04 | 400.000 | MT73      | bank receipt |
+          | FromDate   | ToDate     | VocherType | Cashbox | BankAccountNumber |PhoneNo |balanceAmount | Id1 | Date1      | Amount1 | Username1 | VoucherType1 | Id2 | Date2      | Amount2 | Username2 | VoucherType2 | Id3 | Date3      | Amount3 | Username3 | VoucherType3 | Id4 | Date4      | Amount4 | Username4 | VoucherType4 |
+          | 1401-03-04 | 1401-03-04 |            |         |                   |        |300.000       | 202 | 1401-03-04 | 700.000 | MT73      | cash receipt | 602 | 1401-03-04 | 600.000 | MT73      | cash payment | 702 | 1401-03-04 | 200.000 | MT73      | bank payment | 300 | 1401-03-04 | 400.000 | MT73      | bank receipt |
 
     Scenario Outline: Balance report by filtering on voucher type gets reported properly
         When 'Mina' tries to gets balance report with following info
@@ -78,7 +78,7 @@ I want to get Balance Report from vouchers
         Examples: Filtering based on voucher type (payment)
           | FromDate   | ToDate     | VocherType   | cashbox | BankAccountNumber |PhoneNo  |balanceAmount  | Id1 | Date1      | Amount1 | Username1 | VoucherType1 | Id2 | Date2      | Amount2 | Username2 | VoucherType2 | Id3 | Date3      | Amount3 | Username3 | VoucherType3 |
           | 1401-03-02 | 1401-03-04 | cash payment |         |                   |         |-1.300.000     | 600 | 1401-03-02 | 500.000 | MT73      | cash payment | 601 | 1401-03-03 | 200.000 | MT73      | cash payment | 602 | 1401-03-04 | 600.000 | MT73      | cash payment |
-          | 1401-03-02 | 1401-03-04 | bank payment |         |                   |         |-900.000        | 700 | 1401-03-02 | 300.000 | MT73      | bank payment | 701 | 1401-03-03 | 400.000 | MT73      | bank payment | 702 | 1401-03-04 | 200.000 | MT73      | bank payment |
+          | 1401-03-02 | 1401-03-04 | bank payment |         |                   |         |-900.000       | 700 | 1401-03-02 | 300.000 | MT73      | bank payment | 701 | 1401-03-03 | 400.000 | MT73      | bank payment | 702 | 1401-03-04 | 200.000 | MT73      | bank payment |
 
      Scenario Outline: Balance report by filtering on voucher type and cashbox gets reported properly
         When 'Mina' tries to gets balance report with following info
