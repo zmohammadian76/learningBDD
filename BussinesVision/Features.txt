@@ -1,0 +1,40 @@
+Features:
+
+Party:
+1-Defining Party
+2-Modifying Party
+3-Removing Party
+
+CashBox:
+1-Defining CashBox
+2-Modifying CashBox
+3-Removing CashBox
+
+Bank:
+1-Defining Bank
+2-Modifying Bank
+3-Removing Bank
+
+BankAccounts:
+1-Defining BankAccounts
+2-Modifying BankAccounts
+3-Removing BankAccounts
+
+PaymentVocher:
+1-Defining Bank Peyment Vocher
+2-Defining Cash Peyment Vocher
+3-Modifying Bank Peyment Vocher
+4-Modifying Cash Peyment Vocher
+5-Removing Bank Peyment Vocher
+6-Removing Cash Peyment Vocher
+
+ReceiptVocher:
+1-Defining Bank Receipt Vocher
+2-Defining Cash Receipt Vocher
+3-Modifying Bank Receipt Vocher
+4-Modifying Cash Receipt Vocher
+5-Removing Bank Receipt Vocher
+6-Removing Cash Receipt Vocher
+
+BalanceReport:
+1-Balance Report

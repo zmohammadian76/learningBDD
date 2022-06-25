@@ -1,0 +1,13 @@
+Acceptance Criteria:
+
+1-Admin can create, edit and delete customer information in the system
+
+2-The admin can issue a cash receipt for party
+
+3-The admin can issue a bank receipt for party
+
+4-The admin can issue a cash payment document for party
+
+5-The admin can issue a bank payment document for party
+
+6-Admin can get financial reporting from the system

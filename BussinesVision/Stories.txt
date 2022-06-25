@@ -1,0 +1,7 @@
+Stories:
+
+1-Defining Cash Receipt Vocher
+2-Defining Bank Receipt Vocher
+3-Defining Cash Payment Vocher
+4-Defining Bank Payment Vocher
+5-Balance Report
