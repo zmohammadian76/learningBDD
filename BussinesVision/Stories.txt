@@ -1,7 +1,43 @@
-Stories:
 
-1-Defining Cash Receipt Vocher
-2-Defining Bank Receipt Vocher
-3-Defining Cash Payment Vocher
-4-Defining Bank Payment Vocher
-5-Balance Report
+Party:
+. a new party get defined properly
+. party gets modified properly
+. party gets removed properly
+
+CashBox:
+. a new cashbox gets defined properly
+. cashbox gets modified properly
+. cashbox gets removed properly
+
+Bank:
+. a new Bank gets defined properly
+. Bank gets modified properly
+. Bank gets removed properly
+
+BankAccount:
+. a new Bank Account gets defined properly
+. Bank Account gets modified properly
+. Bank Account gets removed properly
+
+PaymentVoucher:
+. a new bank peyment vocher gets defined properly
+. a new cash peyment voucher gets defined properly
+. bank peyment vocher gets modified properly
+. cash peyment voucher gets modified properly
+. bank peyment vocher gets removed properly
+. cash peyment voucher gets removed properly
+
+ReceiptVoucher:
+. a new bank receipt vocher gets defined properly
+. a new cash receipt voucher gets defined properly
+. bank receipt gets modified properly
+. cash receipt voucher gets modified properly
+. bank receipt vocher gets removed properly
+. cash receipt voucher gets removed properly
+
+BalanceReport:
+. Balance report by filtering on date range gets reported properly
+. Balance report by filtering on voucher type gets reported properly
+. Balance report by filtering on voucher type and cashbox gets reported properly
+. Balance report by filtering on voucher type and BankAccountNumber gets reported properly
+. Balance report by filtering on party PhoneNumber gets reported properly

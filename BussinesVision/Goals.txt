@@ -1,7 +1,4 @@
-Busiines Goals:
-
-1-Improve the speed of customer service
-
-2-Have a turnover report based on customers
-
-3-Avoid negative credit sources
+Goals:
+. Managing cash flow of all organization's treasury accounts.
+. Helping C-Level managers in financial planning by providing accurate financial reports.
+. Increasing customer satisfaction by removing all current paper-based financial services.	

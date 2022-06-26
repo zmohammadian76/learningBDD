@@ -1,7 +1,5 @@
-Capabilities:
-
-1-Admin can register customer receipt and payment documents in the system
-
-2-Admin can manage the company's financial balance in the system
-
-3-Admin can get financial reporting from the system
+Capabilities: 
+. Treasurers should be able to manage organization's Parties information.
+. Treasurers should be able to manage all organization's BankAccounts.
+. Treasurers should be able to manage organization's treasury Cashboxes.
+. Treasurers should be able to manage payment and receive vouchers.

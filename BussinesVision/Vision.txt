@@ -1,2 +1,2 @@
 Vision:
-Creating a financial system that enables the admin to record the user's received and paid documents faster and easier than the current manual system in the system and manage the company's financial balance.
+Building a system to to facilate all payment and receive processes of the organization more quicker than current manual system.	
