@@ -1,4 +1,6 @@
 
+. Managing Parties
+. Managing Cashboxes
 . Managing Cash Receipt Vocher
 . Managing Bank Receipt Vocher
 . Managing Cash Payment Vocher
