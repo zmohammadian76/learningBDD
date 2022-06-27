@@ -3,3 +3,4 @@ Capabilities:
 . Treasurers should be able to manage all organization's BankAccounts.
 . Treasurers should be able to manage organization's treasury Cashboxes.
 . Treasurers should be able to manage payment and receive vouchers.
+. Treasurers should be able to get balance report.
