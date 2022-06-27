@@ -1,2 +1,2 @@
 Vision:
-Building a system to to facilate all payment and receive processes of the organization more quicker than current manual system.	
+Building a system in order to facilate all payment and receive processes of the organization more quicker than current manual system.	
