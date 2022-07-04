@@ -1,2 +1,6 @@
 Vision:
-Building a system in order to facilate all payment and receive processes of the organization more quicker than current manual system.	
+FOR <operator> 
+WHO She wants to register customer receipt and payment voucher in the system
+THE TreasuryManagement
+THAT This allows the operator to easily register receipt and payment voucher in the system and manage the company's financial account 
+Our product allows the operator to record customer receipt and payment voucher and report based on each customer and manage the company's financial account.
